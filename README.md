@@ -3,7 +3,7 @@
 ## The task
 Northstar Labs receives access requests as free-text messages. Build a small runnable application that uses a language model to turn those messages into structured records and a review queue for the IT team. The supplied company, people and requests are fictional.
 
-Start with materials/office-policy.md, the eight messages in materials/requests/, and snapshot.schema.json. Choose a CLI, service or web application as the interface.
+Start with materials/office-policy.md, the 20 JSON request exports in materials/requests/, and snapshot.schema.json. Choose a CLI, service or web application as the interface.
 
 ## Required behavior
 - Extract the request details using a language model. Supply snapshot.schema.json through the provider's native schema-constrained structured-output configuration, directly or through an SDK that forwards it. Keep the application-authored prompt focused on extraction instructions and field meanings; place the complete JSON schema exclusively in that configuration.
@@ -19,7 +19,7 @@ Start with materials/office-policy.md, the eight messages in materials/requests/
 | Source code and dependency lockfile | Runnable application, extraction prompt, schema and model request configuration |
 | deliverables/extractions.jsonl | One current record per message: document_id, source_sha256, extraction (schema-conforming object, or null on error), status, owner, next_action, and error (null on success) |
 | deliverables/queue.json | The review queue linked to extraction records by document_id |
-| deliverables/accuracy.md | Expected and actual fields for the eight supplied messages and one paraphrase you author; exact-match counts with denominators, factual errors, model/configuration and run date; identify live calls and mocked tests |
+| deliverables/accuracy.md | Expected and actual fields for the 20 supplied messages and one paraphrase you author; exact-match counts with denominators, factual errors, model/configuration and run date; identify live calls and mocked tests |
 | deliverables/request-evidence.json | Credential-redacted request configuration showing the schema setting, model ID and completion status |
 | deliverables/verification.md | Commands run, observed results, repairs, and operating limits |
 | Coding-session capture | Session record paired with the submitted commit, collected through the facilitator's capture setup |

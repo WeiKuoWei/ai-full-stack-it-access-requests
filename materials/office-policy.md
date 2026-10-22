@@ -2,10 +2,15 @@
 
 Northstar Labs uses this intake application to prepare access requests for human review. All exercise data is fictional.
 
+## Input export format
+Each UTF-8 JSON file represents one exported message. Read its `message` string as the natural-language source for extraction. `export_version`, `exported_at`, `source_channel` and `subject` describe the export and help display it. Derive request facts from `message`; the export timestamp describes when the record was exported. Messages vary in length, up to 200 English words.
+
+Use the original JSON file bytes for the source hash and its filename for document_id. Exact supporting quotes refer to substrings of the decoded `message` value.
+
 ## Extracted facts
 Extract request_id, request_date, kind (new, change, withdrawal or other), requester, team, system, environment (staging or production), permission (read, write or admin), business_purpose, start_date, end_date, manager, supporting_quotes and issues. Use the supplied schema. Dates use YYYY-MM-DD.
 
-Use explicit facts from each message. A header is part of the source. Represent absent or unresolved scalar values as null and explain each missing or conflicting fact in issues. Preserve conflicting alternatives in exact supporting_quotes. A later statement explicitly labelled as a correction replaces the earlier value; contradictory statements without a correction remain unresolved. A relative date stays unresolved. For a change request, extract the requested new permission.
+Use explicit facts from each message. Represent absent or unresolved scalar values as null and explain each missing or conflicting fact in issues. Preserve conflicting alternatives in exact supporting_quotes. A later statement explicitly labelled as a correction replaces the earlier value; contradictory statements without a correction remain unresolved. A relative date stays unresolved. For a change request, extract the requested new permission.
 
 The document_id is the input filename. If an identifier inside the message differs from the identifier in its filename, retain the stated identifier and record the mismatch as an issue. Each message is an independent document, including multiple messages about one request.
 

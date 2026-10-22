@@ -1,0 +1,385 @@
+{
+  "request_config": {
+    "provider": "google-vertex-ai",
+    "sdk": "google-genai",
+    "model": "gemini-2.5-pro",
+    "project": "gitroll",
+    "location": "global",
+    "generation_config": {
+      "system_instruction": "<prompt.SYSTEM_PROMPT>",
+      "response_mime_type": "application/json",
+      "response_json_schema": "<snapshot.schema.json, unmodified>",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    }
+  },
+  "schema_setting": "generation_config",
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "request_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "request_date": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "kind": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "enum": [
+          "new",
+          "change",
+          "withdrawal",
+          "other",
+          null
+        ]
+      },
+      "requester": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "team": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "system": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "environment": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "enum": [
+          "staging",
+          "production",
+          null
+        ]
+      },
+      "permission": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "enum": [
+          "read",
+          "write",
+          "admin",
+          null
+        ]
+      },
+      "business_purpose": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "start_date": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "end_date": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "manager": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "supporting_quotes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "issues": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "request_id",
+      "request_date",
+      "kind",
+      "requester",
+      "team",
+      "system",
+      "environment",
+      "permission",
+      "business_purpose",
+      "start_date",
+      "end_date",
+      "manager",
+      "supporting_quotes",
+      "issues"
+    ],
+    "additionalProperties": false
+  },
+  "credentials": "supplied by environment (GOOGLE_APPLICATION_CREDENTIALS or ANTHROPIC_API_KEY); values never written",
+  "config_fingerprint": "b21a69ea9f9ee0f1",
+  "latest_model_call_per_document": [
+    {
+      "document_id": "IT-001.json",
+      "at": "2026-10-22T16:52:07+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1019,
+        "output_tokens": 299
+      }
+    },
+    {
+      "document_id": "IT-002.json",
+      "at": "2026-10-22T16:52:07+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1038,
+        "output_tokens": 297
+      }
+    },
+    {
+      "document_id": "IT-003.json",
+      "at": "2026-10-22T16:52:07+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1029,
+        "output_tokens": 393
+      }
+    },
+    {
+      "document_id": "IT-004.json",
+      "at": "2026-10-22T16:52:07+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1031,
+        "output_tokens": 325
+      }
+    },
+    {
+      "document_id": "IT-005.json",
+      "at": "2026-10-22T16:52:21+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 996,
+        "output_tokens": 341
+      }
+    },
+    {
+      "document_id": "IT-006.json",
+      "at": "2026-10-22T16:52:24+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1029,
+        "output_tokens": 386
+      }
+    },
+    {
+      "document_id": "IT-007.json",
+      "at": "2026-10-22T16:52:25+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1038,
+        "output_tokens": 296
+      }
+    },
+    {
+      "document_id": "IT-008.json",
+      "at": "2026-10-22T16:52:29+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1045,
+        "output_tokens": 342
+      }
+    },
+    {
+      "document_id": "IT-009.json",
+      "at": "2026-10-22T16:52:34+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1015,
+        "output_tokens": 290
+      }
+    },
+    {
+      "document_id": "IT-010.json",
+      "at": "2026-10-22T16:52:35+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1064,
+        "output_tokens": 349
+      }
+    },
+    {
+      "document_id": "IT-011.json",
+      "at": "2026-10-22T16:52:44+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 978,
+        "output_tokens": 279
+      }
+    },
+    {
+      "document_id": "IT-012.json",
+      "at": "2026-10-22T16:52:49+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1068,
+        "output_tokens": 350
+      }
+    },
+    {
+      "document_id": "IT-013.json",
+      "at": "2026-10-22T16:52:54+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1027,
+        "output_tokens": 289
+      }
+    },
+    {
+      "document_id": "IT-014.json",
+      "at": "2026-10-22T16:53:02+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1018,
+        "output_tokens": 427
+      }
+    },
+    {
+      "document_id": "IT-015.json",
+      "at": "2026-10-22T16:53:04+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1075,
+        "output_tokens": 354
+      }
+    },
+    {
+      "document_id": "IT-016.json",
+      "at": "2026-10-22T16:53:13+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1021,
+        "output_tokens": 338
+      }
+    },
+    {
+      "document_id": "IT-017.json",
+      "at": "2026-10-22T16:53:16+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1004,
+        "output_tokens": 385
+      }
+    },
+    {
+      "document_id": "IT-018.json",
+      "at": "2026-10-22T16:53:18+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1110,
+        "output_tokens": 336
+      }
+    },
+    {
+      "document_id": "IT-019.json",
+      "at": "2026-10-22T16:53:26+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1041,
+        "output_tokens": 322
+      }
+    },
+    {
+      "document_id": "IT-020.json",
+      "at": "2026-10-22T16:53:27+00:00",
+      "model": "gemini-2.5-pro",
+      "completion": "complete",
+      "finish_reason": "STOP",
+      "outcome": "success",
+      "usage": {
+        "input_tokens": 1054,
+        "output_tokens": 348
+      }
+    }
+  ]
+}

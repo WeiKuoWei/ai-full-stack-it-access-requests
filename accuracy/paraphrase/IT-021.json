@@ -1,0 +1,7 @@
+{
+  "export_version": "1.0",
+  "exported_at": "2026-10-22T16:00:00Z",
+  "source_channel": "email",
+  "subject": "Quarter-close adjustments",
+  "message": "Morning team - Jonah Price, Treasury Operations. Please log this as IT-021, raised on 2026-10-22. I'd like temporary write rights on Ledger, production side, so I can post the quarter-close adjustment entries Finance has already signed off. Window: 2026-11-02 until 2026-11-04 inclusive. Reporting line: Elena Park. Correction to the above: the window should finish on 2026-11-05, since the close was extended by a day. Everything else stands. Once posted, I'll reconcile against the close checklist with the controller."
+}

@@ -1,0 +1,39 @@
+{
+  "document_id": "IT-002.json",
+  "source_sha256": "007e47d1bd662d246e6d3656b6226b1c512ca4d38d71fc5844b9690ee29c14f6",
+  "extraction": {
+    "request_id": "IT-002",
+    "request_date": "2026-10-22",
+    "kind": "new",
+    "requester": "Owen Reed",
+    "team": "Payments",
+    "system": "Ledger",
+    "environment": "production",
+    "permission": "write",
+    "business_purpose": "The user needs to correct settlement entries that are associated with the wrong reconciliation batch.",
+    "start_date": "2026-10-24",
+    "end_date": "2026-10-25",
+    "manager": "Elena Park",
+    "supporting_quotes": [
+      "Request IT-002",
+      "2026-10-22",
+      "Owen Reed",
+      "in Payments",
+      "requesting new write access",
+      "to Ledger",
+      "in production",
+      "Needed during 2026-10-24 and 2026-10-25",
+      "My manager is Elena Park",
+      "We have several settlement entries associated with the wrong reconciliation batch.",
+      "I'll need to make the corrections at the time of our scheduled maintenance"
+    ],
+    "issues": []
+  },
+  "status": "review",
+  "owner": "Security Review",
+  "next_action": "review-risk-then-owner",
+  "error": null,
+  "processed_at": "2026-10-22T16:54:40+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Settlement correction window"
+}

@@ -1,0 +1,42 @@
+{
+  "document_id": "IT-004.json",
+  "source_sha256": "d5de0f00c5c118e499ed27c6f779139b1b4c483158adf5fd2d86f513b1f9654e",
+  "extraction": {
+    "request_id": "IT-004",
+    "request_date": "2026-10-22",
+    "kind": "new",
+    "requester": "Theo Malik",
+    "team": "Quality Engineering",
+    "system": "Atlas",
+    "environment": null,
+    "permission": "read",
+    "business_purpose": "The user needs to investigate why the nightly quality report counts differ from the release checklist.",
+    "start_date": "2026-10-23",
+    "end_date": "2026-10-30",
+    "manager": "Nia Patel",
+    "supporting_quotes": [
+      "IT-004",
+      "submitted on 2026-10-22",
+      "by Theo Malik",
+      "Quality Engineering",
+      "grant me new read access",
+      "in staging",
+      "to Atlas",
+      "from 2026-10-23",
+      "to 2026-10-30",
+      "Nia Patel is my manager.",
+      "I'm trying to understand why the nightly quality report shows different counts from the release checklist.",
+      "This request is for the production environment."
+    ],
+    "issues": [
+      "conflict: environment - staging vs production"
+    ]
+  },
+  "status": "needs-information",
+  "owner": "IT Service Desk",
+  "next_action": "clarify",
+  "error": null,
+  "processed_at": "2026-10-22T16:52:07+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Quality report investigation"
+}

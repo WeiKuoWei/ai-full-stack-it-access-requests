@@ -1,0 +1,41 @@
+{
+  "document_id": "IT-010.json",
+  "source_sha256": "8d40a28442575c92e012ea57356a5d39b5a5724dd8e85de65118bffbf269ea2d",
+  "extraction": {
+    "request_id": "IT-010",
+    "request_date": "2026-10-22",
+    "kind": "new",
+    "requester": "Ben Carter",
+    "team": "Operations",
+    "system": "Ledger",
+    "environment": "production",
+    "permission": "read",
+    "business_purpose": "The user needs to compare daily reconciliation reports with system entries to investigate discrepancies in totals.",
+    "start_date": "2026-10-27",
+    "end_date": null,
+    "manager": "Elena Park",
+    "supporting_quotes": [
+      "I'm Ben Carter",
+      "in Operations",
+      "This is a new access request",
+      "(IT-010)",
+      "date of submission is 2026-10-22",
+      "read access to Ledger (production)",
+      "starting 2026-10-27",
+      "My manager is Elena Park",
+      "to compare the daily reconciliation report to the entries that the operations folks see as some of the totals have been hard to explain at the hand-over",
+      "Haven't quite fixed on the end date."
+    ],
+    "issues": [
+      "missing: end_date - The user has not specified an end date for the access.",
+      "note: The user has indicated the access duration is uncertain and may need to be extended after an initial investigation."
+    ]
+  },
+  "status": "needs-information",
+  "owner": "IT Service Desk",
+  "next_action": "clarify",
+  "error": null,
+  "processed_at": "2026-10-22T16:52:35+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Reconciliation investigation"
+}

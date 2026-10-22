@@ -1,0 +1,39 @@
+{
+  "document_id": "IT-018.json",
+  "source_sha256": "0f4735183084c428b92ba37fc4247b8792222daff9395ab3feb94b866a8de1bd",
+  "extraction": {
+    "request_id": "IT-018",
+    "request_date": "2026-10-22",
+    "kind": "new",
+    "requester": "Daniel Wright",
+    "team": "Data Engineering",
+    "system": "Atlas",
+    "environment": "staging",
+    "permission": "read",
+    "business_purpose": "The user needs to investigate a data discrepancy in a sample dataset for an analyst workshop and update example queries.",
+    "start_date": "2026-10-27",
+    "end_date": "2026-11-03",
+    "manager": "Priya Shah",
+    "supporting_quotes": [
+      "Could you please record IT-018",
+      "submitted on 2026-10-22",
+      "I (Daniel Wright in Data Engineering)",
+      "request new read access",
+      "to Atlas",
+      "in staging",
+      "for the dates 2026-10-27 through 2026-11-03",
+      "My manager is Priya Shah",
+      "I am reviewing our sample dataset we use during our weekly analyst workshop.",
+      "I'd like to try and find the source of the difference prior to the next workshop.",
+      "I'd like to update example queries (if need be)"
+    ],
+    "issues": []
+  },
+  "status": "review",
+  "owner": "System Owner",
+  "next_action": "review-request",
+  "error": null,
+  "processed_at": "2026-10-22T16:53:18+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Analyst workshop dataset"
+}

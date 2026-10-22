@@ -1,0 +1,61 @@
+2026-10-23 00:52:21,335 INFO IT-001.json extracted 102a69f8fbc3 -> System Owner / review-request
+2026-10-23 00:52:24,540 INFO IT-004.json extracted d5de0f00c5c1 -> IT Service Desk / clarify
+2026-10-23 00:52:25,446 INFO IT-002.json extracted 007e47d1bd66 -> Security Review / review-risk-then-owner
+2026-10-23 00:52:29,118 INFO IT-003.json extracted 80b64509cf82 -> IT Service Desk / clarify
+2026-10-23 00:52:34,501 INFO IT-005.json extracted fb0f1d645134 -> IT Service Desk / inspect-message
+2026-10-23 00:52:35,247 INFO IT-007.json extracted dd4857323b83 -> Security Review / review-risk-then-owner
+2026-10-23 00:52:44,127 INFO IT-006.json extracted d342c355bcf7 -> IT Service Desk / inspect-message
+2026-10-23 00:52:49,511 INFO IT-010.json extracted 8d40a2844257 -> IT Service Desk / clarify
+2026-10-23 00:52:54,261 INFO IT-011.json extracted 0776059292b2 -> IT Service Desk / clarify
+2026-10-23 00:53:02,483 INFO IT-008.json extracted b1e1de4bd678 -> System Owner / review-request
+2026-10-23 00:53:04,806 INFO IT-012.json extracted 192b72da5e74 -> Security Review / review-risk-then-owner
+2026-10-23 00:53:13,297 INFO IT-009.json extracted 8aa13b91d4d1 -> IT Service Desk / clarify
+2026-10-23 00:53:16,252 INFO IT-014.json extracted 8f2ce7407f23 -> IT Service Desk / clarify
+2026-10-23 00:53:18,717 INFO IT-015.json extracted a8beef34c01e -> System Owner / review-request
+2026-10-23 00:53:26,933 INFO IT-016.json extracted 4c470e6fc498 -> IT Service Desk / clarify
+2026-10-23 00:53:27,980 INFO IT-013.json extracted e477b1b1ecab -> Security Review / review-risk-then-owner
+2026-10-23 00:53:29,738 INFO IT-018.json extracted 0f4735183084 -> System Owner / review-request
+2026-10-23 00:53:36,201 INFO IT-017.json extracted 48c112b2079b -> IT Service Desk / clarify
+2026-10-23 00:53:36,710 INFO IT-019.json extracted a2818ebed37c -> Security Review / review-risk-then-owner
+2026-10-23 00:53:41,133 INFO IT-020.json extracted 05c79e5aeea9 -> IT Service Desk / clarify
+2026-10-23 00:54:53,295 INFO IT-002.json extracted 007e47d1bd66 -> Security Review / review-risk-then-owner
+2026-10-23 00:54:55,929 INFO IT-001.json extracted 102a69f8fbc3 -> System Owner / review-request
+2026-10-23 00:54:57,792 INFO IT-003.json extracted 80b64509cf82 -> IT Service Desk / clarify
+2026-10-23 00:55:02,467 INFO IT-004.json extracted d5de0f00c5c1 -> IT Service Desk / clarify
+2026-10-23 00:55:10,327 INFO IT-005.json extracted fb0f1d645134 -> IT Service Desk / confirm-withdrawal
+2026-10-23 00:55:14,462 WARNING IT-008.json failed: invalid: supporting quote is not an exact substring of the message: '(Correction: environment is actually staging. Previous entry used production.)'
+2026-10-23 00:55:22,609 INFO IT-009.json extracted 8aa13b91d4d1 -> IT Service Desk / clarify
+2026-10-23 00:55:30,477 INFO IT-010.json extracted 8d40a2844257 -> IT Service Desk / clarify
+2026-10-23 00:55:39,787 INFO IT-007.json extracted dd4857323b83 -> Security Review / review-risk-then-owner
+2026-10-23 00:55:42,389 INFO IT-012.json extracted 192b72da5e74 -> Security Review / review-risk-then-owner
+2026-10-23 00:55:42,504 INFO IT-006.json extracted d342c355bcf7 -> IT Service Desk / inspect-message
+2026-10-23 00:55:43,266 INFO IT-011.json extracted 0776059292b2 -> IT Service Desk / clarify
+2026-10-23 00:55:48,651 INFO IT-013.json extracted e477b1b1ecab -> Security Review / review-risk-then-owner
+2026-10-23 00:55:54,951 INFO IT-015.json extracted a8beef34c01e -> System Owner / review-request
+2026-10-23 00:55:54,957 INFO IT-016.json extracted 4c470e6fc498 -> IT Service Desk / clarify
+2026-10-23 00:56:03,357 INFO IT-014.json extracted 8f2ce7407f23 -> IT Service Desk / clarify
+2026-10-23 00:56:05,935 INFO IT-017.json extracted 48c112b2079b -> IT Service Desk / clarify
+2026-10-23 00:56:08,641 INFO IT-018.json extracted 0f4735183084 -> System Owner / review-request
+2026-10-23 00:56:22,095 INFO IT-020.json extracted 05c79e5aeea9 -> IT Service Desk / clarify
+2026-10-23 00:56:23,430 INFO IT-019.json extracted a2818ebed37c -> Security Review / review-risk-then-owner
+2026-10-23 00:57:20,311 INFO IT-008.json extracted b1e1de4bd678 -> System Owner / review-request
+2026-10-23 00:58:57,065 INFO IT-004.json reused d5de0f00c5c1
+2026-10-23 00:58:57,066 INFO IT-001.json reused 102a69f8fbc3
+2026-10-23 00:58:57,066 INFO IT-002.json reused 007e47d1bd66
+2026-10-23 00:58:57,066 INFO IT-003.json reused 80b64509cf82
+2026-10-23 00:58:57,069 INFO IT-007.json reused dd4857323b83
+2026-10-23 00:58:57,069 INFO IT-006.json reused d342c355bcf7
+2026-10-23 00:58:57,069 INFO IT-005.json reused fb0f1d645134
+2026-10-23 00:58:57,070 INFO IT-008.json reused b1e1de4bd678
+2026-10-23 00:58:57,071 INFO IT-009.json reused 8aa13b91d4d1
+2026-10-23 00:58:57,071 INFO IT-010.json reused 8d40a2844257
+2026-10-23 00:58:57,072 INFO IT-012.json reused 192b72da5e74
+2026-10-23 00:58:57,072 INFO IT-011.json reused 0776059292b2
+2026-10-23 00:58:57,073 INFO IT-015.json reused a8beef34c01e
+2026-10-23 00:58:57,074 INFO IT-013.json reused e477b1b1ecab
+2026-10-23 00:58:57,074 INFO IT-016.json reused 4c470e6fc498
+2026-10-23 00:58:57,076 INFO IT-014.json reused 8f2ce7407f23
+2026-10-23 00:58:57,077 INFO IT-017.json reused 48c112b2079b
+2026-10-23 00:58:57,079 INFO IT-019.json reused a2818ebed37c
+2026-10-23 00:58:57,080 INFO IT-018.json reused 0f4735183084
+2026-10-23 00:58:57,080 INFO IT-020.json reused 05c79e5aeea9

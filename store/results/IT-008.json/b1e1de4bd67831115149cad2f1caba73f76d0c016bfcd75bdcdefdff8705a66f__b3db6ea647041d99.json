@@ -1,0 +1,41 @@
+{
+  "document_id": "IT-008.json",
+  "source_sha256": "b1e1de4bd67831115149cad2f1caba73f76d0c016bfcd75bdcdefdff8705a66f",
+  "extraction": {
+    "request_id": "IT-008",
+    "request_date": "2026-10-22",
+    "kind": "new",
+    "requester": "Noah Kim",
+    "team": "Finance",
+    "system": "Atlas",
+    "environment": "staging",
+    "permission": "read",
+    "business_purpose": "The user needs to check the sample billing total against the forecasting workbook for the month-end rehearsal.",
+    "start_date": "2026-10-25",
+    "end_date": "2026-10-31",
+    "manager": "Priya Shah",
+    "supporting_quotes": [
+      "For IT-008",
+      "submitted date 2026-10-22",
+      "Noah Kim from Finance",
+      "is asking for new read access",
+      "to Atlas",
+      "in production",
+      "from 2026-10-25 to 2026-10-31",
+      "Priya Shah is my manager",
+      "I am trying to check the sample billing total vs forecasting workbook before month end rehearsal.",
+      "Correction: environment is actually staging.",
+      "Previous entry used production."
+    ],
+    "issues": [
+      "note: environment was corrected from 'production' to 'staging'."
+    ]
+  },
+  "status": "review",
+  "owner": "System Owner",
+  "next_action": "review-request",
+  "error": null,
+  "processed_at": "2026-10-22T16:57:05+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Billing rehearsal access"
+}

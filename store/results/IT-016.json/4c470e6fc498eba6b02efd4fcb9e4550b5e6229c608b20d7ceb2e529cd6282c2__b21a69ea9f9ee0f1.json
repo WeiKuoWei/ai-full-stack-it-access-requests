@@ -1,0 +1,38 @@
+{
+  "document_id": "IT-016.json",
+  "source_sha256": "4c470e6fc498eba6b02efd4fcb9e4550b5e6229c608b20d7ceb2e529cd6282c2",
+  "extraction": {
+    "request_id": "IT-061",
+    "request_date": "2026-10-22",
+    "kind": "new",
+    "requester": "Alex Turner",
+    "team": "Platform",
+    "system": "Forge",
+    "environment": "staging",
+    "permission": "read",
+    "business_purpose": "To investigate why the starter project build time varies by comparing pipeline run timestamps and template versions.",
+    "start_date": "2026-10-26",
+    "end_date": "2026-10-28",
+    "manager": "Nia Patel",
+    "supporting_quotes": [
+      "this is Alex Turner from Platform",
+      "submitting request IT-061",
+      "for 2026-10-22",
+      "I am asking for new read access",
+      "to Forge (staging)",
+      "for the dates 2026-10-26 through 2026-10-28",
+      "Nia Patel is my manager",
+      "I am looking at the example pipeline runs to figure out why the starter project takes longer to build some of the time."
+    ],
+    "issues": [
+      "id-mismatch: The request ID in the message (IT-061) does not match the document ID (IT-016)."
+    ]
+  },
+  "status": "needs-information",
+  "owner": "IT Service Desk",
+  "next_action": "clarify",
+  "error": null,
+  "processed_at": "2026-10-22T16:53:13+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Starter pipeline timing"
+}

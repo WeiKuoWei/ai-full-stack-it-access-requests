@@ -1,0 +1,40 @@
+{
+  "document_id": "IT-015.json",
+  "source_sha256": "a8beef34c01e19d3192a97d81b7a9b1a076703733d842b2eb50b002c6723cd2d",
+  "extraction": {
+    "request_id": "IT-015",
+    "request_date": "2026-10-22",
+    "kind": "new",
+    "requester": "Mia Davis",
+    "team": "Learning",
+    "system": "Beacon",
+    "environment": "staging",
+    "permission": "read",
+    "business_purpose": "The user needs to ensure sample conversations for a workshop handout match the system's examples.",
+    "start_date": "2026-10-29",
+    "end_date": "2026-10-31",
+    "manager": "Elena Park",
+    "supporting_quotes": [
+      "IT-015",
+      "2026-10-22",
+      "Mia Davis - Learning",
+      "set new read access",
+      "to Beacon",
+      "in staging",
+      "for the dates 2026-10-24 - 2026-10-26",
+      "My manager is Elena Park",
+      "I need to make sure that the sample conversations in the examples I'm building match up to the exercise handout for the Support onboarding workshop.",
+      "Correction: substitute the access dates in the above with 2026-10-29 - 2026-10-31."
+    ],
+    "issues": [
+      "note: date-correction - A later statement corrected the access dates."
+    ]
+  },
+  "status": "review",
+  "owner": "System Owner",
+  "next_action": "review-request",
+  "error": null,
+  "processed_at": "2026-10-22T16:53:04+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Workshop sample review"
+}

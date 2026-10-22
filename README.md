@@ -1,30 +1,91 @@
-# AI Full Stack Challenge — IT Access Requests
+# Northstar IT access-request intake
 
-## The task
-Northstar Labs receives access requests as free-text messages. Build a small runnable application that uses a language model to turn those messages into structured records and a review queue for the IT team. The supplied company, people and requests are fictional.
+Command-line application. Reads exported access-request messages, extracts a structured record from each with a language model, validates it, applies the review policy in `materials/office-policy.md`, and writes a review queue for the IT team. It approves nothing: every successful result waits for a named human reviewer.
 
-Start with materials/office-policy.md, the 20 JSON request exports in materials/requests/, and snapshot.schema.json. Choose a CLI, service or web application as the interface.
+## Supported runtime and provider
 
-## Required behavior
-- Extract the request details using a language model. Supply snapshot.schema.json through the provider's native schema-constrained structured-output configuration, directly or through an SDK that forwards it. Keep the application-authored prompt focused on extraction instructions and field meanings; place the complete JSON schema exclusively in that configuration.
-- Validate response structure and completion status before using extracted data. Preserve exact supporting quotes and represent uncertain fields as null with an explanatory issue.
-- Apply the supplied review policy and display each request's status, owner and next action. Approval decisions belong to the named human reviewers.
-- Record input filenames and SHA-256 hashes. Reuse unchanged results, process changed inputs and retain earlier versions. Process each message independently and make failures visible with a reproducible retry command.
-- Handle malformed output, provider errors, refusal and interrupted responses explicitly. Keep model/provider settings configurable and document a supported configuration. The facilitator supplies model-provider access through environment variables.
+| Item | Value |
+|---|---|
+| Runtime | Python 3.11 or newer, run through `uv` |
+| Supported configuration (used for the delivered results) | Gemini on Google Vertex AI: `INTAKE_PROVIDER=gemini`, model `gemini-2.5-pro`, location `global` |
+| Schema setting | `snapshot.schema.json`, unmodified, sent as `response_json_schema` with `response_mime_type=application/json` in the `google-genai` request config |
+| Also implemented, not run live | Claude through the Anthropic API (`INTAKE_PROVIDER=anthropic`) or through Vertex AI (`INTAKE_ANTHROPIC_VERTEX=1`); schema sent as `output_config.format`. Covered by stub-client tests only: the Vertex project used here returned 404 for every Claude model tried |
 
-## What to submit
+## Environment variables
+
+| Name | Used for | Default |
+|---|---|---|
+| `GOOGLE_VERTEX_PROJECT` | Vertex AI project (required for Gemini, and for Claude on Vertex) | none |
+| `GOOGLE_VERTEX_LOCATION` | Vertex AI location | `global` |
+| `GOOGLE_APPLICATION_CREDENTIALS` | Path to the Google credentials file | none |
+| `ANTHROPIC_API_KEY` | Anthropic API (only when `INTAKE_PROVIDER=anthropic`) | none |
+| `INTAKE_PROVIDER` | `gemini` or `anthropic` | `gemini` |
+| `INTAKE_MODEL` | Model ID | `gemini-2.5-pro` / `claude-opus-5-5` |
+| `INTAKE_TEMPERATURE` | Sampling temperature | `0` |
+| `INTAKE_MAX_OUTPUT_TOKENS` | Output token limit | `8192` |
+| `INTAKE_WORKERS` | Messages processed concurrently | `4` |
+| `INTAKE_ANTHROPIC_VERTEX` | `1` to reach Claude through Vertex AI | `0` |
+
+Credential values are never written to outputs or to `store/logs/intake.log` (known secret variables, bearer tokens and API-key patterns are redacted).
+
+## Commands
+
+```
+uv sync                                    # install from uv.lock
+uv run pytest                              # automated tests (no network, no model calls)
+uv run access-intake intake                # extract, validate, route the 20 files in materials/requests/
+uv run access-intake queue                 # print the review queue as a table
+uv run access-intake queue -v              # also print each entry's issues and errors
+uv run access-intake accuracy              # rebuild deliverables/accuracy.md from current outputs
+```
+
+Accuracy check, end to end (live model calls: 20 supplied messages, then the authored paraphrase):
+
+```
+export INTAKE_PROVIDER=gemini GOOGLE_VERTEX_PROJECT=... GOOGLE_APPLICATION_CREDENTIALS=...
+uv run access-intake intake
+uv run access-intake intake --input-dir accuracy/paraphrase --out-dir accuracy/paraphrase-run --state-dir accuracy/paraphrase-store
+uv run access-intake accuracy
+```
+
+Expected values live in `accuracy/expected.json`, written by hand from the messages and the policy.
+
+## Inspecting the queue
+
+| Where | What |
+|---|---|
+| `uv run access-intake queue` | One row per document: status, owner, next action, issue count |
+| `deliverables/queue.json` | Full queue entries, linked to `deliverables/extractions.jsonl` by `document_id`; includes issues, error text, retry command, and paths of every stored result version |
+| `deliverables/extractions.jsonl` | One current record per message |
+| `deliverables/request-evidence.json` | Credential-free request configuration, model ID, and the completion status of the latest call per document |
+| `store/results/<document_id>/<sha256>__<fingerprint>.json` | Every valid result ever produced, one file per source revision and configuration (history) |
+| `store/attempts/<document_id>.jsonl` | Every attempt: reused, success or error |
+
+## How it works
+
+```
+file bytes -> SHA-256 -> stored result for (hash, config fingerprint)?
+                              |yes: reuse, no model call
+                              |no:  model call (schema in native structured-output config)
+                                   -> completion status -> JSON parse -> schema check
+                                   -> date check -> quotes are exact substrings of the message
+                                   -> code adds issues it can verify (id mismatch, date order,
+                                      missing required facts, override wording)
+                                   -> policy rules 1-5 -> owner, status, next action
+```
+
+- A message is processed independently. A failure becomes a queue entry with status `error`, owner IT Service Desk, next action `retry-extraction`, a null extraction, and the exact command to retry that one file.
+- Handled explicitly: provider error (`provider-error`), refusal or safety block (`refusal`), cut-off output (`interrupted`), non-JSON output (`malformed`), schema or quote violations (`invalid`), unreadable input (`input`).
+- Changed input gets a new result and the earlier result stays in `store/results/` with its earlier hash. If a later attempt fails, the last valid result stays in history and the current queue shows the latest error. Changing the model, temperature, prompt or schema changes the configuration fingerprint and reprocesses every file.
+
+## Layout
+
 | Path | Content |
 |---|---|
-| README.md | Setup, supported runtime/provider, exact intake/test/accuracy-check commands, environment-variable names, and how to inspect the queue |
-| Source code and dependency lockfile | Runnable application, extraction prompt, schema and model request configuration |
-| deliverables/extractions.jsonl | One current record per message: document_id, source_sha256, extraction (schema-conforming object, or null on error), status, owner, next_action, and error (null on success) |
-| deliverables/queue.json | The review queue linked to extraction records by document_id |
-| deliverables/accuracy.md | Expected and actual fields for the 20 supplied messages and one paraphrase you author; exact-match counts with denominators, factual errors, model/configuration and run date; identify live calls and mocked tests |
-| deliverables/request-evidence.json | Credential-redacted request configuration showing the schema setting, model ID and completion status |
-| deliverables/verification.md | Commands run, observed results, repairs, and operating limits |
-| Coding-session capture | Session record paired with the submitted commit, collected through the facilitator's capture setup |
-
-Include automated tests covering a complete request, missing dates, conflicting details, embedded instructions, provider failure, an unchanged rerun, and changed source content. Build expected results from the supplied messages and policy. Add a paraphrased synthetic request to exercise extraction on fresh wording.
-
-## Submission
-Commit and push the application, outputs and session capture. Submit the repository URL and exact commit through the Classroom assignment. The facilitator supplies the assignment and capture instructions.
+| `src/access_intake/prompt.py` | Extraction instructions and field meanings (no schema) |
+| `src/access_intake/providers.py` | Gemini-on-Vertex and Claude adapters, completion mapping |
+| `src/access_intake/validate.py` | Response validation and verifiable-issue checks |
+| `src/access_intake/policy.py` | Routing rules 1-5 and the error route |
+| `src/access_intake/pipeline.py`, `store.py` | Hashing, reuse, history, outputs, redacted logging |
+| `tests/` | Mocked tests (fake provider): complete request, missing dates, conflict, embedded instruction, provider failure, unchanged rerun, changed source, plus bad responses and adapter mapping |
+| `deliverables/` | Submitted outputs |

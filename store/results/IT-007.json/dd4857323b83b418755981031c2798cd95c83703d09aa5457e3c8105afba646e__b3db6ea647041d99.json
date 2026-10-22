@@ -1,0 +1,38 @@
+{
+  "document_id": "IT-007.json",
+  "source_sha256": "dd4857323b83b418755981031c2798cd95c83703d09aa5457e3c8105afba646e",
+  "extraction": {
+    "request_id": "IT-007",
+    "request_date": "2026-10-22",
+    "kind": "change",
+    "requester": "Grace Tan",
+    "team": "Developer Experience",
+    "system": "Forge",
+    "environment": "staging",
+    "permission": "write",
+    "business_purpose": "The user needs to update starter project templates and confirm example pipelines are working.",
+    "start_date": "2026-10-24",
+    "end_date": "2026-10-28",
+    "manager": "Nia Patel",
+    "supporting_quotes": [
+      "IT-007",
+      "2026-10-22",
+      "Grace Tan",
+      "Developer Experience",
+      "I have current (read only) access to Forge (staging)",
+      "would like to transition to (write)",
+      "from 2026-10-24 to 2026-10-28",
+      "My manager is Nia Patel.",
+      "We're updating starter project templates, so i want to save our changes for the templates.",
+      "Also confirming example pipelines are still working."
+    ],
+    "issues": []
+  },
+  "status": "review",
+  "owner": "Security Review",
+  "next_action": "review-risk-then-owner",
+  "error": null,
+  "processed_at": "2026-10-22T16:54:57+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Starter template updates"
+}

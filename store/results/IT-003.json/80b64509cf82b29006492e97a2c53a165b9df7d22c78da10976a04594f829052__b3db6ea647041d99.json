@@ -1,0 +1,46 @@
+{
+  "document_id": "IT-003.json",
+  "source_sha256": "80b64509cf82b29006492e97a2c53a165b9df7d22c78da10976a04594f829052",
+  "extraction": {
+    "request_id": "IT-003",
+    "request_date": "2026-10-22",
+    "kind": "new",
+    "requester": "Lina Gomez",
+    "team": "Customer Success",
+    "system": "Beacon",
+    "environment": null,
+    "permission": null,
+    "business_purpose": "The requester needs to gather account notes for an upcoming customer renewal review.",
+    "start_date": null,
+    "end_date": null,
+    "manager": "Priya Shah",
+    "supporting_quotes": [
+      "this is Lina Gomez",
+      "from Customer Success",
+      "I'm opening up IT-003",
+      "on 2026-10-22",
+      "I need new access to Beacon",
+      "The same access Sam has",
+      "We are working on the customer renewal review next week",
+      "I'm trying to get the account notes together",
+      "My manager is Priya Shah",
+      "I didn't note what environment he was on",
+      "or what the permission is named",
+      "Can someone help me figure out what the request should be?"
+    ],
+    "issues": [
+      "missing: environment - requester does not know which environment is needed",
+      "missing: permission - requester does not know what permission is needed and refers to another user's access",
+      "relative-date: start_date - 'next week' is relative to an unstated date",
+      "missing: end_date - no end date was specified",
+      "note: The requester is unsure of the specific access details and has asked for help."
+    ]
+  },
+  "status": "needs-information",
+  "owner": "IT Service Desk",
+  "next_action": "clarify",
+  "error": null,
+  "processed_at": "2026-10-22T16:54:40+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Beacon access for renewal review"
+}

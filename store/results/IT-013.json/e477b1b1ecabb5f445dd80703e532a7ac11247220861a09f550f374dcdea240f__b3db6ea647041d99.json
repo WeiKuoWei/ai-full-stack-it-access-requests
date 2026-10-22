@@ -1,0 +1,38 @@
+{
+  "document_id": "IT-013.json",
+  "source_sha256": "e477b1b1ecabb5f445dd80703e532a7ac11247220861a09f550f374dcdea240f",
+  "extraction": {
+    "request_id": "IT-013",
+    "request_date": "2026-10-22",
+    "kind": "new",
+    "requester": "Emma Wilson",
+    "team": "Compliance",
+    "system": "Beacon",
+    "environment": "production",
+    "permission": "read",
+    "business_purpose": "The user needs to review account activity records for an internal audit.",
+    "start_date": "2026-10-28",
+    "end_date": "2026-10-30",
+    "manager": "Elena Park",
+    "supporting_quotes": [
+      "IT-013",
+      "dated 2026-10-22",
+      "This is Emma Wilson from Compliance.",
+      "I need to get new access",
+      "to Beacon",
+      "for reading",
+      "in production",
+      "Need it from 2026-10-28 to 2026-10-30",
+      "to review account activity records to help with internal audit",
+      "My manager is Elena Park."
+    ],
+    "issues": []
+  },
+  "status": "review",
+  "owner": "Security Review",
+  "next_action": "review-risk-then-owner",
+  "error": null,
+  "processed_at": "2026-10-22T16:55:39+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Account activity audit"
+}

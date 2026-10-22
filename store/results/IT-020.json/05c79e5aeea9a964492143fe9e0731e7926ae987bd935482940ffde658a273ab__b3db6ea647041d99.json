@@ -1,0 +1,41 @@
+{
+  "document_id": "IT-020.json",
+  "source_sha256": "05c79e5aeea9a964492143fe9e0731e7926ae987bd935482940ffde658a273ab",
+  "extraction": {
+    "request_id": "IT-020",
+    "request_date": "2026-10-22",
+    "kind": "new",
+    "requester": "Ethan Clark",
+    "team": "Product",
+    "system": "Atlas",
+    "environment": "staging",
+    "permission": "read",
+    "business_purpose": "The requester needs to view sample usage records to draft a summary on feature adoption.",
+    "start_date": "2026-10-29",
+    "end_date": "2026-11-02",
+    "manager": null,
+    "supporting_quotes": [
+      "IT-020.",
+      "Dated 2026-10-22.",
+      "I'm Ethan Clark",
+      "with Product.",
+      "I need new Atlas read access",
+      "to staging",
+      "from 2026-10-29",
+      "to 2026-11-02.",
+      "I want to look at some sample usage records before I draft the summary on feature adoption.",
+      "My manager is Priya Shah.",
+      "The manager for this request is Elena Park."
+    ],
+    "issues": [
+      "conflict: manager - 'My manager is Priya Shah.' vs 'The manager for this request is Elena Park.'"
+    ]
+  },
+  "status": "needs-information",
+  "owner": "IT Service Desk",
+  "next_action": "clarify",
+  "error": null,
+  "processed_at": "2026-10-22T16:56:03+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Feature adoption summary"
+}

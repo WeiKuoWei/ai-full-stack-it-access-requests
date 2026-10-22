@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-10-22T16:56:39+00:00",
+  "note": "Review queue only. Approval decisions belong to the named human reviewers.",
+  "entries": [
+    {
+      "document_id": "IT-021.json",
+      "source_sha256": "213d8b36292f2c21189b56e8f96f88c2ede2e253e3c7df94c6861f74cec56ddb",
+      "status": "review",
+      "owner": "Security Review",
+      "next_action": "review-risk-then-owner",
+      "request_id": "IT-021",
+      "kind": "new",
+      "requester": "Jonah Price",
+      "system": "Ledger",
+      "environment": "production",
+      "permission": "write",
+      "issues": [
+        "note: end_date was corrected from 2026-11-04 to 2026-11-05."
+      ],
+      "error": null,
+      "retry_command": null,
+      "result_versions": [
+        "paraphrase-store/results/IT-021.json/213d8b36292f2c21189b56e8f96f88c2ede2e253e3c7df94c6861f74cec56ddb__b21a69ea9f9ee0f1.json",
+        "paraphrase-store/results/IT-021.json/213d8b36292f2c21189b56e8f96f88c2ede2e253e3c7df94c6861f74cec56ddb__b3db6ea647041d99.json"
+      ]
+    }
+  ]
+}

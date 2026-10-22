@@ -1,0 +1,40 @@
+{
+  "document_id": "IT-019.json",
+  "source_sha256": "a2818ebed37c50392ff66143f0f4ecea0509b40a6d42edff4168770041d8e87d",
+  "extraction": {
+    "request_id": "IT-019",
+    "request_date": "2026-10-22",
+    "kind": "change",
+    "requester": "Sara Ahmed",
+    "team": "Customer Operations",
+    "system": "Beacon",
+    "environment": "production",
+    "permission": "read",
+    "business_purpose": "The requester is transitioning roles and needs to review the daily exception report and explain its entries.",
+    "start_date": "2026-10-28",
+    "end_date": "2026-11-04",
+    "manager": "Elena Park",
+    "supporting_quotes": [
+      "Sara Ahmed",
+      "Customer Operations",
+      "This is IT-019",
+      "submitted 2026-10-22",
+      "I need to change my current Beacon access",
+      "in production",
+      "from write to read",
+      "from 2026-10-28",
+      "to 2026-11-04",
+      "My manager is Elena Park",
+      "I am transitioning from updating accounts to reviewing the daily exception report",
+      "I need to view the records that make up the exception report and to explain any unusual entries when I hand it over."
+    ],
+    "issues": []
+  },
+  "status": "review",
+  "owner": "Security Review",
+  "next_action": "review-risk-then-owner",
+  "error": null,
+  "processed_at": "2026-10-22T16:55:54+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Exception report handover"
+}

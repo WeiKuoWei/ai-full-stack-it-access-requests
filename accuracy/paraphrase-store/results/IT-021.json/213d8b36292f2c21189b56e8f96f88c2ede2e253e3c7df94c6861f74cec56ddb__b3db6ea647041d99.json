@@ -1,0 +1,42 @@
+{
+  "document_id": "IT-021.json",
+  "source_sha256": "213d8b36292f2c21189b56e8f96f88c2ede2e253e3c7df94c6861f74cec56ddb",
+  "extraction": {
+    "request_id": "IT-021",
+    "request_date": "2026-10-22",
+    "kind": "new",
+    "requester": "Jonah Price",
+    "team": "Treasury Operations",
+    "system": "Ledger",
+    "environment": "production",
+    "permission": "write",
+    "business_purpose": "The user needs to post quarter-close adjustment entries.",
+    "start_date": "2026-11-02",
+    "end_date": "2026-11-05",
+    "manager": "Elena Park",
+    "supporting_quotes": [
+      "Jonah Price",
+      "Treasury Operations",
+      "Please log this as IT-021",
+      "raised on 2026-10-22",
+      "I'd like temporary write rights",
+      "Ledger",
+      "production side",
+      "so I can post the quarter-close adjustment entries",
+      "Window: 2026-11-02",
+      "until 2026-11-04 inclusive",
+      "Reporting line: Elena Park",
+      "Correction to the above: the window should finish on 2026-11-05"
+    ],
+    "issues": [
+      "note: end_date was corrected from 2026-11-04 to 2026-11-05."
+    ]
+  },
+  "status": "review",
+  "owner": "Security Review",
+  "next_action": "review-risk-then-owner",
+  "error": null,
+  "processed_at": "2026-10-22T16:56:26+00:00",
+  "model": "gemini-2.5-pro",
+  "subject": "Quarter-close adjustments"
+}
